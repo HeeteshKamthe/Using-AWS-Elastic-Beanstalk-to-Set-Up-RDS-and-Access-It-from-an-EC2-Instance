@@ -94,4 +94,4 @@ SHOW DATABASES;
 
 - ✅ Use AWS Systems Manager Parameter Store or Secrets Manager to store credentials securely.
 
-- ✅ Regularly monitor CloudWatch metrics for RDS to detect unusual activity.# Using-AWS-Elastic-Beanstalk-to-Set-Up-RDS-and-Access-It-from-an-EC2-Instance
+- ✅ Regularly monitor CloudWatch metrics for RDS to detect unusual activity.

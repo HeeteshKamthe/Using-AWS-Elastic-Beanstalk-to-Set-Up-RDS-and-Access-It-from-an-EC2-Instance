@@ -79,6 +79,121 @@ psql -h <RDS-endpoint> -U <db-user> -d <db-name>
 CREATE DATABASE test_db;
 SHOW DATABASES;
 ```
+--- 
+
+## ✅ Optional Enhancements Implementation Steps
+### 🔐 1. Store RDS Credentials Securely
+#### Step 1: Store Credentials in AWS Systems Manager Parameter Store
+
+1. Open AWS Systems Manager Console → Parameter Store → Create Parameter.
+
+2. Create parameters:
+
+- Name: /project/db-username
+
+- Type: SecureString
+
+- Value: <db-username>
+
+
+And:
+
+- Name: /project/db-password
+
+- Type: SecureString
+
+- Value: <db-password>
+
+#### Step 2: Access Stored Credentials from EC2 Instance
+
+1. Install AWS CLI if not already installed:
+```bash
+sudo yum install -y aws-cli
+```
+
+2. Retrieve credentials securely:
+```bash
+aws ssm get-parameter --name "/project/db-username" --with-decryption --query "Parameter.Value" --output text
+aws ssm get-parameter --name "/project/db-password" --with-decryption --query "Parameter.Value" --output text
+```
+
+### 🧱 2. Add Test Script for Database Operations
+#### Step 1: Create a Script test_db.sh on EC2
+```bash
+#!/bin/bash
+
+DB_HOST="<RDS-endpoint>"
+DB_USER=$(aws ssm get-parameter --name "/project/db-username" --with-decryption --query "Parameter.Value" --output text)
+DB_PASS=$(aws ssm get-parameter --name "/project/db-password" --with-decryption --query "Parameter.Value" --output text)
+
+# Example MySQL Operations
+mysql -h $DB_HOST -u $DB_USER -p$DB_PASS -e "CREATE DATABASE IF NOT EXISTS test_db;"
+mysql -h $DB_HOST -u $DB_USER -p$DB_PASS -e "SHOW DATABASES;"
+```
+#### Step 2: Make Script Executable and Run It
+```bash
+chmod +x test_db.sh
+./test_db.sh
+```
+
+### 📊 3. Set Up Monitoring Using Amazon CloudWatch
+#### Step 1: Create CloudWatch Alarm for RDS Metrics
+
+- Go to AWS Management Console → CloudWatch → Alarms → Create Alarm.
+
+- Select RDS Metrics → Choose metrics like:
+
+    - CPUUtilization
+
+    - FreeStorageSpace
+
+    - DatabaseConnections
+
+- Set threshold (e.g., CPUUtilization > 80%).
+
+#### Step 2: Configure Alarm Actions
+
+- Set notification (e.g., send email using SNS topic).
+
+#### These steps help you:
+
+- Keep credentials safe.
+
+- Test DB access automatically.
+
+- Monitor RDS health in production.
+
+---
+
+### ✅ How to Use the Script
+
+1. Replace <RDS-endpoint> with your actual RDS endpoint URL.
+
+2. Upload the script to the EC2 instance (or create it directly):
+```bash
+nano test_db.sh
+# Paste the script content, save and exit
+```
+
+3. Make the script executable:
+```bash
+chmod +x test_db.sh
+```
+
+4. Run the script:
+```bash
+./test_db.sh
+```
+
+### ✅ What the Script Does
+
+- Retrieves DB username and password securely from Parameter Store.
+
+- Creates a database named test_db (if not already present).
+
+- Lists all available databases on the RDS instance.
+
+---
 
 ### 🔐 Security Considerations
 
@@ -95,3 +210,4 @@ SHOW DATABASES;
 - ✅ Use AWS Systems Manager Parameter Store or Secrets Manager to store credentials securely.
 
 - ✅ Regularly monitor CloudWatch metrics for RDS to detect unusual activity.
+

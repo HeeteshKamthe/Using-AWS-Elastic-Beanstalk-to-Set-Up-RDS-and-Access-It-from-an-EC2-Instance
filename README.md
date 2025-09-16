@@ -1,11 +1,11 @@
 # 📚 Using AWS Elastic Beanstalk to Set Up RDS and Access It from an EC2 Instance
 
 ## Technologies & Tools:
-    - AWS Elastic Beanstalk
-    - Amazon RDS (MySQL/PostgreSQL)
-    - Amazon EC2
-    - VPC/Subnet/Security Groups
-    - (Optional: AWS Systems Manager, CloudWatch)
+- AWS Elastic Beanstalk
+- Amazon RDS (MySQL/PostgreSQL)
+- Amazon EC2
+- VPC/Subnet/Security Groups
+- (Optional: AWS Systems Manager, CloudWatch)
 
 ## 🏗️ Architecture Diagram
 

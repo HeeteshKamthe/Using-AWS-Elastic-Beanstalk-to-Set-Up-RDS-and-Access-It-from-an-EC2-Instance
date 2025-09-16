@@ -157,11 +157,11 @@ chmod +x test_db.sh
 
 #### These steps help you:
 
-- Keep credentials safe.
+    - Keep credentials safe.
 
-- Test DB access automatically.
+    - Test DB access automatically.
 
-- Monitor RDS health in production.
+    - Monitor RDS health in production.
 
 ---
 

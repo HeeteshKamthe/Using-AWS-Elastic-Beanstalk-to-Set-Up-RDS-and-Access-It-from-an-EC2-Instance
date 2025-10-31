@@ -1,8 +1,8 @@
 -- Create database
-CREATE DATABASE IF NOT EXISTS facebook;
+CREATE DATABASE IF NOT EXISTS registration;
 
 -- Select the database
-USE facebook;
+USE registration;
 
 -- Create 'users' table
 CREATE TABLE IF NOT EXISTS users (

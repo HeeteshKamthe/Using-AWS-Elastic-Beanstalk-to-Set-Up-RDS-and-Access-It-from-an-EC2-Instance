@@ -81,10 +81,19 @@ mysql -h <RDS-endpoint> -u <db-user> -p
 psql -h <RDS-endpoint> -U <db-user> -d <db-name>
 ```
 
-2. Test read/write operations:
+2. Create a Database & Table:
 ```sql
-CREATE DATABASE test_db;
-SHOW DATABASES;
+CREATE DATABASE registration;
+USE registration;
+
+CREATE TABLE users (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    website VARCHAR(100),
+    comment TEXT,
+    gender VARCHAR(10)
+);
 ```
 --- 
 

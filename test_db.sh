@@ -2,7 +2,7 @@
 
 # Variables
 DB_HOST="<RDS-endpoint>"      # Replace with your RDS endpoint
-DB_NAME="test_db"
+DB_NAME="registration"
 USERNAME_PARAM="/project/db-username"
 PASSWORD_PARAM="/project/db-password"
 

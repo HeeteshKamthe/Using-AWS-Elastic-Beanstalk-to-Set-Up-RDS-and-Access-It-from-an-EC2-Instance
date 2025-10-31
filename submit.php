@@ -6,12 +6,6 @@ $website = $_POST["website"];
 $comment = $_POST["comment"];
 $gender = $_POST["gender"];
 
-echo $name;
-echo $email;
-echo $gender;
-echo $comment;
-echo $website;
-
 $servername = "RDS-ENDPOINT";
 $username = "root";
 $password = "pass1234";
@@ -30,7 +24,7 @@ $sql = "INSERT INTO users (name, email, website, comment, gender)
         VALUES ('$name', '$email', '$website', '$comment', '$gender')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    echo "<h1>New record created successfully</h1>";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

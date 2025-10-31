@@ -28,7 +28,7 @@
 
 ### Step 1: Elastic Beanstalk Environment Setup
 
-1. Create a new Elastic Beanstalk application using Node.js, Python Flask, or PHP.
+1. Create a new Elastic Beanstalk application using Node.js, Python Flask, or PHP (Upload a ZIP file of code or program).
 
 2. During environment creation:
 
@@ -208,6 +208,33 @@ chmod +x test_db.sh
 - Creates a database named test_db (if not already present).
 
 - Lists all available databases on the RDS instance.
+
+---
+### Screenshots
+
+🖼️ EB Enviornment Status 
+<p align="center"> <img src="img/eb-status.jpg" alt="EB Enviornment Status " width="500"/> </p>
+
+🖼️ RDS Status
+<p align="center"> <img src="img/rds-status.jpg" alt="RDS Status" width="500"/> </p>
+
+🖼️ Security Group of EB 
+<p align="center"> <img src="img/eb-sg.jpg" alt="Security Group of EB" width="500"/> </p>
+
+🖼️ Security Group of EC2 
+<p align="center"> <img src="img/ec2-sg.jpg" alt="Security Group of EC2" width="500"/> </p>
+
+🖼️ Upload Code ZIP file
+<p align="center"> <img src="img/code-upload.jpg" alt="Security Group of EC2" width="500"/> </p>
+
+🖼️ Live Application Forms Page
+<p align="center"> <img src="img/form.jpg" alt="Live Application Forms Page" width="500"/> </p>
+
+🖼️ Succesful Submission to RDS
+<p align="center"> <img src="img/submit.jpg" alt="Succesful Submission to rds" width="500"/> </p>
+
+🖼️ Database Record
+<p align="center"> <img src="img/data-record.jpg" alt="Database Record" width="500"/> </p>
 
 ---
 

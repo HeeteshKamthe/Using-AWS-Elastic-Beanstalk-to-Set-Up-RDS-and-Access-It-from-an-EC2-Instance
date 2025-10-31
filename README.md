@@ -213,28 +213,28 @@ chmod +x test_db.sh
 ### Screenshots
 
 🖼️ EB Enviornment Status 
-<p align="center"> <img src="img/eb-status.jpg" alt="EB Enviornment Status " width="500"/> </p>
+<p align="center"> <img src="images/eb-status.jpg" alt="EB Enviornment Status " width="500"/> </p>
 
 🖼️ RDS Status
-<p align="center"> <img src="img/rds-status.jpg" alt="RDS Status" width="500"/> </p>
+<p align="center"> <img src="images/rds-status.jpg" alt="RDS Status" width="500"/> </p>
 
 🖼️ Security Group of EB 
-<p align="center"> <img src="img/eb-sg.jpg" alt="Security Group of EB" width="500"/> </p>
+<p align="center"> <img src="images/eb-sg.jpg" alt="Security Group of EB" width="500"/> </p>
 
 🖼️ Security Group of EC2 
-<p align="center"> <img src="img/ec2-sg.jpg" alt="Security Group of EC2" width="500"/> </p>
+<p align="center"> <img src="images/ec2-sg.jpg" alt="Security Group of EC2" width="500"/> </p>
 
 🖼️ Upload Code ZIP file
-<p align="center"> <img src="img/code-upload.jpg" alt="Security Group of EC2" width="500"/> </p>
+<p align="center"> <img src="images/code-upload.jpg" alt="Security Group of EC2" width="500"/> </p>
 
 🖼️ Live Application Forms Page
-<p align="center"> <img src="img/form.jpg" alt="Live Application Forms Page" width="500"/> </p>
+<p align="center"> <img src="images/form.jpg" alt="Live Application Forms Page" width="500"/> </p>
 
 🖼️ Succesful Submission to RDS
-<p align="center"> <img src="img/submit.jpg" alt="Succesful Submission to rds" width="500"/> </p>
+<p align="center"> <img src="images/submit.jpg" alt="Succesful Submission to rds" width="500"/> </p>
 
 🖼️ Database Record
-<p align="center"> <img src="img/data-record.jpg" alt="Database Record" width="500"/> </p>
+<p align="center"> <img src="images/data-record.jpg" alt="Database Record" width="500"/> </p>
 
 ---
 

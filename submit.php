@@ -9,7 +9,7 @@ $gender = $_POST["gender"];
 $servername = "RDS-ENDPOINT";
 $username = "root";
 $password = "pass1234";
-$dbname = "facebook";
+$dbname = "registration";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
